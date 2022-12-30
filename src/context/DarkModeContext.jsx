@@ -8,6 +8,7 @@ export const DarkModeProvider = ({ children }) => {
     setDarkMode(!darkMode);
     updateDarkMode(!darkMode);
   };
+
   useEffect(() => {
     const isDark =
       localStorage.theme === 'dark' ||
@@ -27,8 +28,10 @@ export const DarkModeProvider = ({ children }) => {
 function updateDarkMode(darkMode) {
   if (darkMode) {
     document.documentElement.classList.add('dark');
+    localStorage.theme = 'dark';
   } else {
     document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
   }
 }
 

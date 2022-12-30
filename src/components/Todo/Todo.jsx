@@ -17,11 +17,11 @@ const Todo = ({ todo, onUpdate, onDelete }) => {
       <input
         className={styles.checkbox}
         type='checkbox'
-        id='checkbox'
+        id='id'
         checked={status === 'complete'}
         onChange={handleChange}
       />
-      <label htmlFor='checkbox' className={styles.text}>
+      <label htmlFor='id' className={styles.text}>
         {text}
       </label>
       <span className={styles.icon}>
